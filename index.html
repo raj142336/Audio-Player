@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        audio {
+
+            display: none;
+            outline: none;
+            width: 80%;
+            border-radius: 20px;
+            padding: 20px 30px;
+            color: palevioletred;
+            margin-top: 40px;
+        }        
+
+        body {
+             
+          height: 100vh;
+          background-image: url(https://img.pikbest.com/backgrounds/20250106/glowing-heart-of-love-a-romantic-valentines-silhouette_11345116.jpg!sw800);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .hero {
+           background-color: rgba(0, 0, 0, 0.482);
+           height: 600px;
+           width: 900px;
+           border-radius: 40px;
+           font-weight: bold;
+
+        }
+        h1 {
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        li {
+            font-size: 30px;
+            list-style: none;
+            transition: 0.3s;
+           
+
+        }
+
+        li:hover {
+            transition: 0.3s;
+            transform: scale(1.01);
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class="hero">
+        
+            <h1>💖My Playlist💖</h1>
+           
+            <ul>
+                <li onclick="
+                    
+                    play(this,'song/pal pal.mp3')
+                    ">song 1 - Pal Pal</li>
+                <li onclick ="
+                
+                    play(this,'song/SANAM RE Title Song FULL VIDEO Pulkit Samrat, Yami Gautam, Urvashi Rautela Divya Khosla Kumar - Copy.mp3')
+                    ">song 2 - Sanam Re</li>
+                <li onclick="
+                    
+                    play(this,'song/Himesh Reshammiya, Ankit Tiwari, Palak Muchhal - Sanam Teri Kasam - Title Song (Lyric Video) - Copy.mp3')
+                    ">song 3 - Sanam teri kasam</li>
+                <li onclick="
+                    
+                    play(this,'song/Toota Jo Kabhi Tara 8K Video A Flying Jatt Tiger Shroff, Jacqueline Sumedha K Sachin Jigar - Copy.mp3')
+                    ">song 4 - Toota jo kabhi tara</li>
+                <li onclick="
+                    
+                    play(this,'song/Lyrical Humsafar Song Saiyaara Ahaan, Aneet Sachet Tandon, Parampara Tandon, Irshad Kamil - Copy.mp3')
+                    ">song 5 - Dheere Dheere tum meri</li>
+                
+            </ul>
+
+            <audio  controls id ="player" src=""></audio>
+       
+    </div>
+
+    <script>
+        function play(element, song){
+
+    document.querySelectorAll("li").forEach(li=>{
+        li.style.color = "white";
+        li.style.fontWeight = "normal";
+    });
+
+    element.style.color = "yellow";
+    element.style.fontWeight = "bold";
+
+    const player = document.getElementById("player");
+    player.style.display = "flex";
+    player.src = song;
+    player.play();
+}
+         
+    </script>
+   
+</body>
+</html>
